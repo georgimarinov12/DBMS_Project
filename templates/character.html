@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <h3> {{ character.name }} </h3>
+            <img src="/home/gosho/Desktop/DBMS/DBMS_Project/templates/images/{{ character.name }}.jpg">
+            <p> <i>{{ character.anime }}</i> </p>
+            <p> {{ character.VA }}  </p>
+                                
+        </div>
+        <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    </body>
+</html>

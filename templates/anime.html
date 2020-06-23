@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <h3> {{ anime.title }} </h3>
+           <img src="/home/gosho/Desktop/DBMS/DBMS_Project/templates/images/{{ anime.title }}.jpg">
+            <p>Studio: <i>{{ anime.studio }}</i> </p>
+            <p>Eps: {{ anime.episodes }}/Seasons: {{ anime.seasons }}  </p>
+            {% for key, value in anime.mapped_names.items() %}
+                <p> {{ key }} - {{ value }} </p>
+            {% endfor %}
+                                
+        </div>
+        <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    </body>
+</html>
